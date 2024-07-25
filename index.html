@@ -12,9 +12,14 @@
             background-color: #f4f4f4;
             overflow-x: hidden; /* Yatay kaydırmayı önler */
         }
-        h1 {
+        .logo-container {
             text-align: center;
             margin: 20px;
+        }
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+            max-width: 300px; /* Logonun genişliğini sınırlandırır */
         }
         .container {
             display: flex;
@@ -46,7 +51,9 @@
     </style>
 </head>
 <body>
-    <h1>Fotoğraf Galerisi</h1>
+    <div class="logo-container">
+        <img src="logo.png" alt="Logo">
+    </div>
     <div class="container">
         <img src="foto1.jpg" alt="Fotoğraf 1">
         <img src="foto2.jpg" alt="Fotoğraf 2">
