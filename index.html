@@ -7,18 +7,25 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
+            overflow-x: hidden; /* Yatay kaydırmayı önler */
+        }
+        h1 {
+            text-align: center;
+            margin: 20px;
         }
         .container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
+            gap: 10px; /* Resimler arasına boşluk ekler */
         }
         .container img {
-            width: 200px;
+            width: 100%;
+            max-width: 600px; /* Resimlerin genişliğini sınırlandırır */
             height: auto;
             border: 2px solid #ddd;
             border-radius: 10px;
@@ -26,7 +33,15 @@
             transition: transform 0.2s;
         }
         .container img:hover {
-            transform: scale(1.05);
+            transform: scale(1.05); /* Hover efektleri */
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .container img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
