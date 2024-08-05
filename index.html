@@ -27,7 +27,7 @@
         .main-logo img {
             max-width: 100%;
             height: auto;
-            max-width: 300px; /* Logonun genişliğini sınırlandırır */
+            max-width: 150px; /* Logonun genişliğini sınırlandırır */
         }
         .contact-icons {
             display: flex;
@@ -49,7 +49,7 @@
             margin: 20px 0;
         }
         .social-icons a img {
-            width: 70px; /* İkonların genişliğini sınırlandırır */
+            width: 40px; /* İkonların genişliğini sınırlandırır */
             height: auto;
             transition: transform 0.2s;
         }
@@ -83,7 +83,9 @@
                 max-width: 100%;
             }
             .main-logo {
-                flex-direction: column;
+                flex-direction: row; /* Logonun yanında görünmesini sağlar */
+                flex-wrap: wrap;
+                justify-content: center;
             }
             .contact-icons {
                 flex-direction: row;
@@ -95,7 +97,7 @@
 <body>
     <div class="logo-container">
         <div class="main-logo">
-            <img src="logo.png" alt="Logo">
+            <img src="murtaza.png" alt="Logo">
             <div class="contact-icons">
                 <a href="https://wa.me/902464002061" target="_blank">
                     <img src="whatsapp.png" alt="WhatsApp">
