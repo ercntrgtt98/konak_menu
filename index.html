@@ -75,6 +75,25 @@
         .container img:hover {
             transform: scale(1.05); /* Hover efektleri */
         }
+        .bottom-logo {
+            text-align: center;
+            margin: 20px;
+        }
+        .bottom-logo img {
+            max-width: 100%;
+            height: auto;
+            max-width: 150px; /* Logonun genişliğini sınırlandırır */
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .bottom-logo img:hover {
+            transform: scale(1.1); /* Hover efektleri */
+        }
+        .hidden-text {
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+        }
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
@@ -83,21 +102,25 @@
                 max-width: 100%;
             }
             .main-logo {
-                flex-direction: row; /* Logonun yanında görünmesini sağlar */
-                flex-wrap: wrap;
-                justify-content: center;
+                flex-direction: column; /* Logonun ve ikonların alt alta görünmesini sağlar */
             }
             .contact-icons {
                 flex-direction: row;
                 justify-content: center;
+                gap: 20px; /* Mobilde ikonlar arasına boşluk ekler */
             }
         }
     </style>
+    <script>
+        function showText() {
+            document.getElementById('hiddenText').style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <div class="logo-container">
         <div class="main-logo">
-            <img src="murtaza.png" alt="Logo">
+            <img src="murtaza.png" alt="Murtaza Logo">
             <div class="contact-icons">
                 <a href="https://wa.me/902464002061" target="_blank">
                     <img src="whatsapp.png" alt="WhatsApp">
@@ -130,6 +153,13 @@
         <img src="foto5.jpg" alt="Fotoğraf 5">
         <img src="foto6.jpg" alt="Fotoğraf 6">
         <img src="foto7.jpg" alt="Fotoğraf 7">
+    </div>
+    <div class="bottom-logo">
+        <img src="logo.png" alt="Logo" onclick="showText()">
+    </div>
+    <div id="hiddenText" class="hidden-text">
+        Muhammet Murtaza ARPACI
+        TR45 0020 6000 6999 1580 5700 01
     </div>
 </body>
 </html>
